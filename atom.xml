@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://h-shawn.github.io</id>
-    <title>Shawn&apos;s Page</title>
-    <updated>2022-05-29T09:30:23.221Z</updated>
+    <title>Shawn</title>
+    <updated>2022-05-29T09:32:29.558Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://h-shawn.github.io"/>
     <link rel="self" href="https://h-shawn.github.io/atom.xml"/>
     <subtitle>After all, tomorrow is another day!</subtitle>
     <logo>https://h-shawn.github.io/images/avatar.png</logo>
     <icon>https://h-shawn.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Shawn&apos;s Page</rights>
+    <rights>All rights reserved 2022, Shawn</rights>
 </feed>
