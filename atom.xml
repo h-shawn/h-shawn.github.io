@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://h-shawn.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Shawn</title>
-    <updated>2022-07-03T02:06:34.254Z</updated>
+    <updated>2022-07-03T02:07:32.690Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://h-shawn.github.io"/>
-    <link rel="self" href="https://h-shawn.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>After all, tomorrow is another day!</subtitle>
-    <logo>https://h-shawn.github.io/images/avatar.png</logo>
-    <icon>https://h-shawn.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2022, Shawn</rights>
     <entry>
         <title type="html"><![CDATA[UCB Algorithm]]></title>
-        <id>https://h-shawn.github.io/post/ucb-algorithm/</id>
-        <link href="https://h-shawn.github.io/post/ucb-algorithm/">
+        <id>http://localhost:4000/post/ucb-algorithm/</id>
+        <link href="http://localhost:4000/post/ucb-algorithm/">
         </link>
         <updated>2022-06-28T03:25:03.000Z</updated>
         <content type="html"><![CDATA[<h4 id="算法">算法</h4>
@@ -183,8 +183,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
     </entry>
     <entry>
         <title type="html"><![CDATA[ETC Algorithm]]></title>
-        <id>https://h-shawn.github.io/post/etc-algorithm/</id>
-        <link href="https://h-shawn.github.io/post/etc-algorithm/">
+        <id>http://localhost:4000/post/etc-algorithm/</id>
+        <link href="http://localhost:4000/post/etc-algorithm/">
         </link>
         <updated>2022-06-26T06:30:37.000Z</updated>
         <content type="html"><![CDATA[<h4 id="regret定义">Regret定义</h4>
