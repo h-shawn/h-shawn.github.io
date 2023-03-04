@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>For Interview | Shawn</title>
+<link rel="shortcut icon" href="https://h-shawn.github.io/favicon.ico?v=1677851883481">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://h-shawn.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="For Interview | Shawn - Atom Feed" href="https://h-shawn.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="C/C++
+const
+
+修饰变量，说明该变量不可以被改变；
+修饰指针，分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）；
+修饰引用，指向常量的引用（reference to ..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://h-shawn.github.io">
+  <img class="avatar" src="https://h-shawn.github.io/images/avatar.png?v=1677851883481" alt="">
+  </a>
+  <h1 class="site-title">
+    Shawn
+  </h1>
+  <p class="site-description">
+    After all, tomorrow is another day
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/post/about" class="menu">
+          About me
+        </a>
+      
+    
+      
+        <a href="https://github.com/h-shawn" class="menu" target="_blank">
+          Github
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Blog
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              For Interview
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-03-03
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h2 id="cc">C/C++</h2>
+<h4 id="const">const</h4>
+<ol>
+<li>修饰变量，说明该变量不可以被改变；</li>
+<li>修饰指针，分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）；</li>
+<li>修饰引用，指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；、</li>
+<li>修饰成员函数，说明该成员函数内不能修改成员变量。</li>
+</ol>
+<pre><code class="language-c">class A
+{
+private:
+    const int a; // 常对象成员
+public:
+    A() : a(0){};      // 构造函数
+    A(int x) : a(x){}; // 初始化列表
+
+    int getValue();       // 普通成员函数
+    int getValue() const; // 常成员函数，不能被修改
+};
+
+void function()
+{
+    A b;             // 普通对象
+    const A a;       // 常对象，只能调用常成员函数
+    const A *p = &amp;a; // 指针变量，指向常对象
+    const A &amp;q = a;  // 指向常对象引用
+
+    char greeting[] = &quot;hello&quot;;
+    char *p1 = greeting;             // 指针变量，指向字符数组变量
+    const char *p2 = greeting;       // 指针变量，指向字符数组常量
+    char *const p3 = greeting;       // 自身是常量的指针，指向字符数组变量
+    const char *const p4 = greeting; // 自身是常量的指针，指向字符数组常量
+}
+
+void function1(const int Var);   // 传递的参数在函数内不可变
+void function2(const char *Var); // 参数指针所指的内容为常量
+void function3(char *const Var); // 参数指针为常量
+void function4(const int &amp;Var);  // 引用参数在函数内为常量
+
+const int function5();  // 返回一个常量
+const int *function6(); // 返回一个指向常量的指数变量
+int *const function7(); // 返回一个指向变量的指针常量
+</code></pre>
+<h4 id="宏定义-define-和-const">宏定义 #define 和 const</h4>
+<table>
+<thead>
+<tr>
+<th>宏定义#define</th>
+<th>const常量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符替换</td>
+<td>常量声明</td>
+</tr>
+<tr>
+<td>预处理器处理</td>
+<td>编译器处理</td>
+</tr>
+<tr>
+<td>无类型安全检查</td>
+<td>有类型安全检查</td>
+</tr>
+<tr>
+<td>不分配内存</td>
+<td>要分配内存</td>
+</tr>
+<tr>
+<td>存储在代码段</td>
+<td>存储在数据段</td>
+</tr>
+<tr>
+<td>可通过#undef取消</td>
+<td>不可取消</td>
+</tr>
+</tbody>
+</table>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#cc">C/C++</a><br>
+*
+<ul>
+<li><a href="#const">const</a></li>
+<li><a href="#%E5%AE%8F%E5%AE%9A%E4%B9%89-define-%E5%92%8C-const">宏定义 #define 和 const</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://h-shawn.github.io/post/asyopt-ucb/">
+              <h3 class="post-title">
+                AsyOpt UCB
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  <a href="mailto:hwangxiao@sjtu.edu.cn">My <strong>Email</strong></a>
+  <a class="rss" href="https://h-shawn.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
